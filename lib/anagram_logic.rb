@@ -2,14 +2,9 @@ require('pry')
 
 
 describe('Anagram#anagram_logic') do
-it('will inform user that the selected two words are the same length') do
-  word_select = Anagram.new('tar','rat')
-  expect(word_select.word_selection()).to(eq("same length"))
-end
-
   it('will inform user that the selected two words are anagrams') do
-    word_select = Anagram.new('tar','rat')
-    expect(word_select.word_selection()).to(eq('Anagram check: True'))
+    word_select = Anagram.new()
+    expect(word_select.anagram_check('tar', 'rat')).to(eq('true'))
   end
   # it('will inform user that the selected two words are not anagrams') do
   #   word_select = Anagram.new('dinosaur','rat')

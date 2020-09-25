@@ -1,0 +1,32 @@
+
+dog and log 
+
+check for anagram > "is anagram "
+#  def is anagram
+
+steps
+
+put strings into arrays
+
+first_word
+second_word
+
+cat => [d, o, g]
+  def is_anagram
+    word_match = []
+
+    # //iterate to compare each char.
+    word_1_match = letters_split(@first_word)
+    word_2_match = letters_split(@first_word)  
+
+    word_1_match.each() do |word|
+      word_match +=1
+  end
+    word_2_match.each() do |word|
+
+end
+
+end
+
+first_word.split("").sort == second_word.split("").sort
+end
