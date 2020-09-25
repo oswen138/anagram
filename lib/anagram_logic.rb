@@ -3,6 +3,6 @@ require('pry')
 describe ('Anagram#anagram_logic') do
   it('initializes phrase') do
     test = Anagram.new(tar)
-    expect(test.phrase).to(eq(tar))
+    expect(test.phrase).to(eq(rat))
   end
 end
