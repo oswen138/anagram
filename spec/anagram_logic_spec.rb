@@ -2,28 +2,54 @@ require('anagram_logic')
 require('rspec')
 
 class Anagram
-  attr_writer(:phrase)
+  attr_accessor:(:word_1, :word_2)
 
-  def initialize(phrase)
-    @phrase = phrase
-    @word_array = ["tar", "rat", "arc", "car", "elbow", "below", "state", "taste"]
+  def initialize()
+    @word_1 = word_1
+    @word_2 = word_2
   end
 
-  def word(input)
-    @words_array.each_with_index { |word|, idx| puts ""
+  def split_into_words(input)
+    input.split(" ")
+  end
 
-   if input =~ /[aeiou]/ && input =~ /[0-9]
-   puts "#{input} 
+  
+  def word_length(word)
+   if @word_l.size == @word_1.size
+    
+  end
 
-
+  def word_join
 end
 
+end    
 
-  def word(input)
-    @phrase = "apple".match
+# word.each do ]
 
-   if input =~ /[aeiou]/ && input =~ /[0-9]
-   puts "#{input} 
+#   a="scar"
+# b="cars"
+# a.size == b.size && a.delete(b).empty?
 
 
-     
+def split_loop()
+  new_array = []
+  counter = 0
+  array = @string.split(' ')
+  array.each do |word|
+    if (word == fake_reverse(word))
+      new_array.push(word)
+      counter += 1
+    else 
+    end
+  end
+  puts "Your sentence has #{counter} palindromes"
+  puts "Palindromes:#{new_array}"
+end
+
+var1.chars.sort.join == var2.chars.sort.join
+
+def anagrams(word, words)
+  words.select { |w| w.chars.sort.join == word.chars.sort.join }
+end
+
+puts anagrams('abba', ['bbaa', 'ddffgg', 'baab'])  
