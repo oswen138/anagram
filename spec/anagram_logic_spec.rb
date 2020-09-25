@@ -3,7 +3,6 @@ require('rspec')
 
 class Anagram
   attr_writer(:phrase)
-  attr_reader(:word_array)
 
   def initialize(phrase)
     @phrase = phrase
