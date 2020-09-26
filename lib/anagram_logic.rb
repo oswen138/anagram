@@ -29,6 +29,4 @@ class Anagram
       "'#{@first_word}' and '#{@second_word}' are not words."
     end
   end
-
-  
 end
