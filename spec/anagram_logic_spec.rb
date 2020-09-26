@@ -3,15 +3,16 @@ require('rspec')
 
 describe('Anagram#anagram_logic') do
 
-it('will inform user that the selected two words is an antigram') do
+  it('will inform user that the selected two words is an antigram') do
       word_select = Anagram.new('front','back')
-      expect(word_select.anagram_check).to(eq("Antigram detected!"))
+      expect(word_select.antigram_check).to(eq("Antigram detected!"))
     end
+
+  it('will inform user that the selected two words are anagrams') do
+    word_select = Anagram.new('tar', 'rat')
+    expect(word_select.anagram_check()).to(eq("Anagram detected!"))
   end
-#   it('will inform user that the selected two words are antigrams') do
-#     word_select = Anagram.new('tar', 'rat')
-#     expect(word_select.anagram_check()).to(eq(true))
-#   end
+end
 # # end
 #   it('will inform user that the selected two words are not anagrams') do
 #     word_select = Anagram.new('dinosaur','rat')
