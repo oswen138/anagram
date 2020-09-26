@@ -15,7 +15,7 @@ class Anagram
       if first_word_clear.sort == second_word_clear.sort
       "Anagram detected!"
       else
-      word_check()
+        word_check()
       end
     else
       "Antigram detected!"
@@ -30,5 +30,5 @@ class Anagram
     end
   end
 
-  def
+  
 end
