@@ -14,8 +14,8 @@ describe('Anagram#anagram_logic') do
   end
 
   it('will check for vowels to determine whether selected word is actually a word') do
-        word_select = Anagram.new('state')
-        expect(word_select.vowel_check()).to(eq("yes, it is a word"))
+    word_select = Anagram.new('state', 'taste')
+    expect(word_select.word_check()).to(eq("yes, it is a word"))
   end
 end
 # # end

@@ -8,6 +8,12 @@ class Anagram
     @second_word = remove_s_p(second_word)
   end
 
+  def word_check()
+    if (@first_word.match(/[aeiouy]/i) || @second_word.match(/[aeiouy]/i))
+       return "yes, it is a word"
+    end
+  end
+
   def remove_s_p(word_combo)
     return word_combo.downcase.gsub(/[^a-z\s]/i, '') 
   end
@@ -36,13 +42,7 @@ class Anagram
     end
   end
 
-  def vowel_check()
-    if (@first_word.include?(/[aeiou]/)) || (@second_word.include?(/[aeiou]/))
-       return "yes, it is a word"
-    else
-       return "no, no word detected"
-    end
-  end
+
 #   def word_check()
 
 #       if (@first_word.include?(/[aeiou]/)) && (@second_word.include?(/[aeiou]/))
