@@ -1,11 +1,9 @@
-require('anagram_logic')
-require('rspec')
+require('pry')
 
 class Anagram
+  attr_accessor(:first_word, :second_word)
 
-  attr_accessor :first_word, :second_word
-
-  def initialize(first_word, second_word)
+  def initialize (first_word, second_word)
     @first_word = first_word
     @second_word = second_word
   end
@@ -19,5 +17,29 @@ class Anagram
       end
     
       true
+    end
+  
+  def word_check()
+
+      if (@first_word.include?(/[aeiou]/)) && (@second_word.include?(/[aeiou]/))
+        yes, it is a word
+      else
+        no, no word detected
+      end
+    end
+
+  def case_check()
+    if @first_word.downcase.split("").match == @second_word.downcase.split("").match
+      anagram detected
+    else 
+      antigram detected
+    end
+  end
+
+  def antigram_check()
+    if /[(#{@first_word}")/.match("#{@second_word}")
+      no antigram detected
+    else
+      antigram detected
     end
   end
