@@ -12,6 +12,11 @@ describe('Anagram#anagram_logic') do
     word_select = Anagram.new('tar', 'rat')
     expect(word_select.anagram_check()).to(eq("Anagram detected!"))
   end
+
+  it('will check for vowels to determine whether selected word is actually a word') do
+        word_select = Anagram.new('state')
+        expect(word_select.vowel_check()).to(eq("yes, it is a word"))
+  end
 end
 # # end
 #   it('will inform user that the selected two words are not anagrams') do

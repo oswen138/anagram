@@ -35,6 +35,14 @@ class Anagram
       return "Anagram detected!"   
     end
   end
+
+  def vowel_check()
+    if (@first_word.include?(/[aeiou]/)) || (@second_word.include?(/[aeiou]/))
+       return "yes, it is a word"
+    else
+       return "no, no word detected"
+    end
+  end
 #   def word_check()
 
 #       if (@first_word.include?(/[aeiou]/)) && (@second_word.include?(/[aeiou]/))
