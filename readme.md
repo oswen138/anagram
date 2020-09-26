@@ -13,8 +13,7 @@ This repo includes an algorithm to check if a word or phrase is an anagram and i
 
 * _open terminal_
 * _type "cd desktop", then press enter_
-* _type "git clone https://github.com/Joebenitus/rock_paper_scissors", then press enter_
-* _type "cd rock\_paper\_scissors", then press enter_
+* _type "git clone "https://github.com/oswen138/anagram.git", then press enter_
 * _type "./lib/anagram_logic.rb"_
 
 ## Known Bugs
