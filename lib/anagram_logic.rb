@@ -7,26 +7,41 @@ class Anagram
     @second_word = second_word
   end
 
-  def anagram_check()
+  def word_check
+    word_1 = @first_word.scan(/[aeiouy]/i)
+    word_2 = @second_word.scan(/[aeiouy]/i)
+
+    if word_1 == [] || word_2 == []
+      "Your words do not have vowels, not a word"
+    else
+      anagram_check()
+    end
+  end
+
+  def anagram_check
     first_word_clear = @first_word.downcase.gsub(/[^a-z]/i, '').split("")
     second_word_clear = @second_word.downcase.gsub(/[^a-z]/i, '').split("")
 
     if first_word_clear.any? {|letter| second_word_clear.include?(letter)}
       if first_word_clear.sort == second_word_clear.sort
-      "Anagram detected!"
+        "Anagram detected!"
       else
-        word_check()
+        palindrome()
+        end
+      else
+        "Antigram detected!"
       end
-    else
-      "Antigram detected!"
     end
-  end
+  
+  def palindrome_check
+     first_word_reverse = @first_word.downcase.reverse()
+     second_word_reverse = @second_word.reverse()
 
-  def word_check()
-    if (@first_word.match(/[aeiouy]/i) || @second_word.match(/[aeiouy]/i))
-      "Your words contain vowels, yes, it is a word"
-    else
-      "'#{@first_word}' and '#{@second_word}' are not words."
-    end
-  end
-end
+     if first_word_reverse == @first_word || second_word_reverse == @second_word
+       "Palindrome detected!"
+     else
+       "Not anagrams."
+     end
+   end
+ end
+
