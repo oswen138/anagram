@@ -27,8 +27,12 @@ describe('Anagram#anagram_logic') do
     word_select = Anagram.new('George Bush','He bugs Gore')
     expect(word_select.anagram_check()).to(eq("Anagram detected!"))
   end
-end
 
+  it('will check if two words share some letters but are not anagrams') do
+    word_select = Anagram.new('front', 'fork')
+    expect(word_select.anagram_check()).to(eq("Your words contain vowels, yes, it is a word"))
+  end
+end
 
 
   
