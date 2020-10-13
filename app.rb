@@ -1,24 +1,12 @@
 require ('./lib/anagram_logic.rb')
 
-data = Data.new
 
-loop do
-  puts('Type a word (or "e" to exit):')
-  first_word = gets.chomp
-  if first_word == 'e'
-    break
-  end
-  puts("Type second word:")
-  second_word = gets.chomp
+puts 'Welcome to Anagrams!'
+puts 'This program helps you determine if given words or phrases are anagrams or not.'
+puts 'Word/phrase no. 1:'
+input1 = gets.chomp
+puts 'Word/phrase no. 2:'
+input2 = gets.chomp
 
-  if !data.word_check(first_word, second_word)
-    puts("error, not a word")
-  elsif data.anagram_check
-    puts("yes, an anagram it is")
-  elsif data.palindrome_check
-    puts("palindrome appears")
-  else
-    puts("neither")
-  end
-end
-
+words = Anagram.new(first_word, second_word)
+puts words.word_check()
